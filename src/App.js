@@ -3,6 +3,7 @@ import CreateContact from './components/CreateContact';
 import ContactList from './components/ContactList';
 import EditContact from './components/EditContact';
 import Search from './components/Search';
+import _ from 'underscore';
 import './App.css';
 
 class App extends Component {
@@ -138,7 +139,7 @@ class App extends Component {
 
     //sort by birthday
     if (this.state.sortBy === 'birthday') {
-      contacts = contacts.sort((a,b) => new Date(a.birthday) - new Date(b.birthday))
+      contacts = _.sortBy(contacts, 'birthday')
     }
 
     //sort direction
