@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     contacts: [],
     edit: null,
-    sortBy: null,
+    sortBy: 'name',
     sortReverse: false
   }
 
