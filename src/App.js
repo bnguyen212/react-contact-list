@@ -149,7 +149,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        <ContactList contacts={contacts} delete={this.deleteContact} edit={this.editContact} sort={this.sortContact}/>
+        <ContactList contacts={contacts}
+                     delete={this.deleteContact}
+                     edit={this.editContact}
+                     sort={this.sortContact}
+                     sortBy={this.state.sortBy}
+                     sortReverse={this.state.sortReverse} />
         {!this.state.edit ? <CreateContact add={this.addContact} /> : <EditContact info={this.state.contacts[index]} update={this.updateContact} cancel={() => this.editContact(null)}/>}
         <Search search={this.searchContact} /> 
       </div>
